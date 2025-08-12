@@ -61,15 +61,18 @@ img {
 }
 
 body {
-  min-width: 1170px;
+  background-color: grey;
+  min-width: 500px;
 }
 
 .container {
-  width: 1170px;
-  margin: 0 auto;
+  background-color: green;
+  width: 500px;
+  margin: 50px auto;
 }
 
 .image {
-  width: 1080px;
-  margin: 0 auto;
+  width: 100%;
+  background-color: aqua;
+  margin: auto auto;
 }
