@@ -78,7 +78,6 @@ body {
 }
 
 .player {
-  background-color: green;
   position: absolute;
   top: 200px;
   left: 100px;
@@ -125,14 +124,10 @@ body {
   left: 15px;
 }
 
-.progressBar::before {
-  width: var(--slider-position);
-}
-
 .slider {
   position: absolute;
   top: -16px;
-  left: 0;
+  left: 0%;
 }
 
 .play {
