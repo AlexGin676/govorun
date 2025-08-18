@@ -160,3 +160,8 @@ body {
     transform: rotate(360deg);
   }
 }
+.dot {
+  position: absolute;
+  background-color: red;
+  transform: translate(-50%, -50%);
+}
