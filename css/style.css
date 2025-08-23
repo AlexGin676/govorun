@@ -62,6 +62,13 @@ ul li {
 
 img {
   vertical-align: top;
+  -drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  touch-action: none;
 }
 
 body {
@@ -87,7 +94,6 @@ body {
   left: 100px;
   width: 60%;
   height: 100%;
-  touch-action: none;
 }
 
 .frame {
