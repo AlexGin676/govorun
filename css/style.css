@@ -172,10 +172,9 @@ link {
 
 .player_body {
   position: relative;
-  margin: 20% auto;
+  margin: 0 auto;
   width: var(--container_width);
   height: 300px;
-  background-color: red;
 }
 
 .frame {
