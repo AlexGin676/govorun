@@ -174,7 +174,10 @@ link {
   position: relative;
   margin: 20% auto;
   width: var(--container_width);
+  height: 300px;
   background-color: green;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .frame {
@@ -264,8 +267,6 @@ link {
 
 .forward,
 .rewind {
-  -ms-touch-action: none;
-      touch-action: none;
   top: 3px;
 }
 
