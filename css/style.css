@@ -144,7 +144,7 @@ link {
 
 .popupContent {
   position: relative;
-  margin: 200px auto;
+  margin: 10% auto;
   width: var(--container_width);
 }
 
@@ -172,7 +172,7 @@ link {
 
 .player_body {
   position: relative;
-  margin: 200px auto;
+  margin: 10% auto;
   width: var(--container_width);
   background-color: green;
 }
@@ -281,11 +281,4 @@ link {
 .rewind {
   position: absolute;
   left: 10px;
-}
-
-.player-full {
-  width: 80%;
-  position: absolute;
-  top: 120px;
-  left: 40px;
 }
