@@ -264,6 +264,8 @@ link {
 
 .forward,
 .rewind {
+  -ms-touch-action: none;
+      touch-action: none;
   top: 3px;
 }
 
