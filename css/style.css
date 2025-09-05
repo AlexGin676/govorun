@@ -144,7 +144,7 @@ link {
 
 .popupContent {
   position: relative;
-  margin: 10% auto;
+  margin: 20% auto;
   width: var(--container_width);
 }
 
@@ -172,7 +172,7 @@ link {
 
 .player_body {
   position: relative;
-  margin: 10% auto;
+  margin: 20% auto;
   width: var(--container_width);
   background-color: green;
 }
