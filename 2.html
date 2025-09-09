@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=500">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250905114950">
+	<meta name="viewport" content="width=500"> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250909083710">
 	<title>govorun</title>
 </head>
 	<body>
@@ -33,29 +33,27 @@
 
 		<div id="popup" class="popup">
 			<div class="player">
+	<audio class="audioPlayer" src=""></audio>
 	<div class="player_body">
-		<audio class="audioPlayer" src=""></audio>
-		<div class="frame">
-			<picture><source srcset="img/player/frame.webp" type="image/webp"><img src="img/player/frame.png" alt=""></picture>
-			<div><img class="tapereel" src="img/player/tape reel.png" alt=""></div>
-			<div><img class="tapereel_2" src="img/player/tape reel 2.png" alt=""></div>
-			<div class="timeDisplay">
-				<img src="img/player/time display.png" alt="">
-				<span class="digits">00:00</span>
-			</div>
-			<div class="progressBar"><img src="img/player/progress bar.png" alt="">
-				<div class="handle"><picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture></div>
-			</div>
-			<div class="controls">
-				<img class="play" src="" alt="">
-				<picture><source srcset="img/player/backward.webp" type="image/webp"><img class="rewind" src="img/player/backward.png" alt=""></picture>
-				<picture><source srcset="img/player/forward.webp" type="image/webp"><img class="forward" src="img/player/forward.png" alt=""></picture>
-			</div>
+		<picture><source srcset="img/player/frame.webp" type="image/webp"><img class="frame" src="img/player/frame.png" alt=""></picture>
+		<img class="tapereel" src="img/player/tape reel.png" alt="">
+		<img class="tapereel_2" src="img/player/tape reel 2.png" alt="">
+		<div class="timeDisplay">
+			<img src="img/player/time display.png" alt="">
+			<span class="digits">00:00</span>
+		</div>
+		<div class="progressBar"><img src="img/player/progress bar.png" alt="">
+			<div class="handle"><picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture></div>
+		</div>
+		<div class="controls">
+			<img class="play" src="" alt="">
+			<picture><source srcset="img/player/backward.webp" type="image/webp"><img class="rewind" src="img/player/backward.png" alt=""></picture>
+			<picture><source srcset="img/player/forward.webp" type="image/webp"><img class="forward" src="img/player/forward.png" alt=""></picture>
 		</div>
 	</div>
 </div>	
 		</div>
 
-		<script src="js/app.min.js?_v=20250905114950"></script>
+		<script src="js/app.min.js?_v=20250909083710"></script>
 	</body>
 </html>

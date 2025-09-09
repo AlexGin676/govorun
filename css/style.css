@@ -172,7 +172,7 @@ link {
 
 .player_body {
   position: relative;
-  margin: 1vh auto;
+  margin: 10vh auto;
   width: var(--container_width);
   height: 300px;
 }
