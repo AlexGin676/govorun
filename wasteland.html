@@ -3,13 +3,13 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=500"> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250909081852">
 	<title>govorun</title>
 </head>
 	<body>
 		<main>
 			<div class="container">
-				<img class="image" src="img/wasteland/wasteland.png" alt="" usemap="#Map">
+				<picture><source srcset="img/wasteland/wasteland.webp" type="image/webp"><img class="image" src="img/wasteland/wasteland.png" alt="" usemap="#Map"></picture>
 				<audio class="audioOnClick" src=""></audio>
 				<map name="Map">
 					<area id="playOnClick" shape="rect" coords="50,170,200,210" href="#" onclick="event.preventDefault()" alt="wasteland/Blake 1">
@@ -28,7 +28,7 @@
 					<area id="tip" shape="rect" coords="60,590,170,640" href="#popup1" class="popup-link" alt="wasteland/popup 7">
 					<area id="playOnClick" shape="rect" coords="300,540,450,575" href="#" onclick="event.preventDefault()" alt="wasteland/Diana 2">
 					<area id="tip" shape="rect" coords="305,590,405,640" href="#popup1" class="popup-link" alt="wasteland/popup 8">
-					<area id="playerPopup" shape="rect" coords="220,700,350,780" href="#popup2" class="popup-link" alt="wasteland/Wasteland - 1">
+					<area id="playerPopup" shape="rect" coords="220,700,350,780" href="#popup2" class="popup-link" alt="wasteland/Wasteland - 2">
 				</map>
 			</div>
 		</main>
@@ -36,7 +36,7 @@
 		<div class="wrapper">
 			<main id="ok">
 				<div class="container">
-					<img class="image" src="img/wasteland/wasteland.png" alt="" usemap="#Map">
+					<picture><source srcset="img/wasteland/wasteland.webp" type="image/webp"><img class="image" src="img/wasteland/wasteland.png" alt="" usemap="#Map"></picture>
 					<audio class="audioOnClick" src=""></audio>
 					<div class="superMap">
 						<div class="button">
@@ -80,7 +80,7 @@
 			<div class="player">
 	<audio class="audioPlayer" src=""></audio>
 	<div class="player_body">
-		<img class="frame" src="img/player/frame.png" alt="">
+		<picture><source srcset="img/player/frame.webp" type="image/webp"><img class="frame" src="img/player/frame.png" alt=""></picture>
 		<img class="tapereel" src="img/player/tape reel.png" alt="">
 		<img class="tapereel_2" src="img/player/tape reel 2.png" alt="">
 		<div class="timeDisplay">
@@ -88,17 +88,17 @@
 			<span class="digits">00:00</span>
 		</div>
 		<div class="progressBar"><img src="img/player/progress bar.png" alt="">
-			<div class="handle"><img src="img/player/slider.png" alt=""></div>
+			<div class="handle"><picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture></div>
 		</div>
 		<div class="controls">
 			<img class="play" src="" alt="">
-			<img class="rewind" src="img/player/backward.png" alt="">
-			<img class="forward" src="img/player/forward.png" alt="">
+			<picture><source srcset="img/player/backward.webp" type="image/webp"><img class="rewind" src="img/player/backward.png" alt=""></picture>
+			<picture><source srcset="img/player/forward.webp" type="image/webp"><img class="forward" src="img/player/forward.png" alt=""></picture>
 		</div>
 	</div>
 </div>	
 		</div>
 
-		<script src="js/app.min.js"></script>
+		<script src="js/app.min.js?_v=20250909081852"></script>
 	</body>
 </html>
