@@ -39,7 +39,6 @@ aside {
 html,
 body {
   height: 100%;
-  width: 100%;
 }
 
 input,
@@ -85,21 +84,56 @@ img {
   -ms-user-select: none;
 }
 
-body {
-  background-color: grey;
-  min-width: 500px;
-  --container_width: 500px;
+span {
+  display: none;
 }
+
+:root {
+  --width: 0;
+  --height: 0;
+}
+
+.no-webp body {
+  background: url("../img/background.jpg") center/cover no-repeat; }
 
 body.lock {
   overflow: hidden;
 }
 
-main {
-  width: var(--container_width);
-  margin: 30px auto;
-  padding: 30px 0 0 0;
-  position: relative;
+.wrapper {
+  min-height: 100vh;
+}
+
+.image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-height: 100vh;
+}
+
+.imageMap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  width: calc(var(--width) * 1px);
+  height: calc(var(--height) * 1px);
+}
+
+.spot {
+  position: absolute;
+  top: --top;
+  left: --left;
+  width: --width;
+  height: --height;
+  z-index: 4;
+  cursor: pointer;
 }
 
 .header {
@@ -109,17 +143,6 @@ main {
   z-index: 2;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.image {
-  width: 100%;
-  margin: auto auto;
-}
-
 link {
   width: 50px;
   height: 50px;
@@ -127,6 +150,7 @@ link {
 }
 
 .popup {
+  background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
@@ -144,8 +168,19 @@ link {
 
 .popupContent {
   position: relative;
-  margin: 20% auto;
-  width: var(--container_width);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(var(--width) * 1px);
+  height: calc(var(--height) * 1px);
+}
+
+.popupImage {
+  position: absolute;
+  top: 30%;
+  left: 0;
 }
 
 .popup.open {
@@ -163,51 +198,61 @@ link {
 }
 
 .player {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: calc(var(--width) * 1px);
+  height: calc(var(--height) * 1px);
 }
 
 .player_body {
-  position: relative;
-  margin: 10vh auto;
-  width: var(--container_width);
-  height: 300px;
+  width: 70%;
+  height: 30%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .frame {
+  width: 100%;
   position: absolute;
-  top: 0;
-  --frame_position: calc(((var(--container_width)) - (var(--container_width) * 70 / 100)) / 2);
-  left: var(--frame_position);
-  width: 70%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .tapereel,
 .tapereel_2 {
   position: absolute;
-  top: -35px;
-  width: 40%;
+  top: -12%;
+  width: 55%;
   -webkit-transform: rotate(var(--x));
       -ms-transform: rotate(var(--x));
           transform: rotate(var(--x));
 }
 
 .tapereel {
-  left: 40px;
+  left: -7%;
 }
 
 .tapereel_2 {
-  right: 40px;
+  right: -8%;
 }
 
 .timeDisplay {
-  width: 15%;
+  width: 21%;
+  height: 10%;
   position: absolute;
-  top: 130px;
-  left: 248px;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, 0%);
       -ms-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
@@ -215,18 +260,20 @@ link {
 
 .digits {
   position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translate(45%, 20%);
-      -ms-transform: translate(45%, 20%);
-          transform: translate(45%, 20%);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 100%;
 }
 
 .progressBar {
-  width: 45%;
+  width: 60%;
   position: absolute;
-  top: 177px;
-  left: 250px;
+  top: 68%;
+  height: 3%;
+  left: 50%;
   -webkit-transform: translate(-50%, 0%);
       -ms-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
@@ -235,9 +282,9 @@ link {
 }
 
 .handle {
-  width: 10%;
+  width: 9%;
   position: absolute;
-  top: -6px;
+  top: -55%;
   left: var(--handle-position);
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
@@ -247,320 +294,82 @@ link {
 
 .controls {
   position: absolute;
-  top: 200px;
-  left: 260px;
+  top: 77%;
+  left: 50%;
   -webkit-transform: translate(-50%, 0%);
       -ms-transform: translate(-50%, 0%);
           transform: translate(-50%, 0%);
-  width: 60%;
-  height: 50px;
+  width: 80%;
+  height: 15%;
 }
 
 .play,
 .forward,
 .rewind {
+  position: absolute;
   width: 15%;
 }
 
 .forward,
 .rewind {
-  top: 3px;
+  top: 10%;
 }
 
 .play {
-  position: absolute;
-  top: 0;
-  left: 120px;
+  top: 0%;
+  left: 50%;
+  -webkit-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+          transform: translateX(-40%);
 }
 
 .forward {
-  position: absolute;
-  left: 215px;
+  right: 5%;
 }
 
 .rewind {
-  position: absolute;
-  left: 10px;
+  left: 5%;
 }
 
-/*
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+@media (min-width: 1000px) {
+  #ok {
+    display: block;
+  }
+
+  #notOk {
+    display: none;
+  }
 }
 
-*::selection 
-{
-	background-color:transparent;
-} 
+@media only screen and (orientation: landscape) and (max-width: 1000px) {
+  #notOk {
+    display: block;
+  }
 
-// change how the widths of blocks are calculated
-*,*:before,*:after {
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
-// remove the outline that some browsers might have
-:focus,:active {outline: none;}
-a:focus,a:active {outline: none;}
+  #ok {
+    display: none;
+  }
 
-nav,footer,header,aside {display: block;}
-
-html,body {
-	height: 100%;
-	width: 100%;
-	//font-size: 100%;
-	//line-height: 1;
-	//font-size: 14px;
-	//-ms-text-size-adjust: 100%;
-	//-moz-text-size-adjust: 100%;
-	//-webkit-text-size-adjust: 100%;
+  .notOk {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+  }
 }
 
-input,button,textarea {font-family:inherit;}
+@media only screen and (orientation: portrait) {
+  #ok {
+    display: block;
+  }
 
-input::-ms-clear {display: none;}
-button {cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited {text-decoration: none;}
-a:hover {text-decoration: none;}
-ul li {list-style: none;}
-
-img {
-	vertical-align: top;
-	-drag: none;
-	user-select: none;
-	-moz-user-select: none;
-	-webkit-user-drag: none;
-	-webkit-user-select: none;
-	-ms-user-select: none;
+  #notOk {
+    display: none;
+  }
 }
 
-.wrapper {
-	min-height: 100vh; // take up all screen
-	overflow: hidden;
-}
-
-.container {
-	height: 100vh;
-	//background-color: green;
-}
-
-.container img {
-	//background-color: aquamarine;
-	width: 100%;
-	height: 100%;
-	object-fit: contain;	
-}
-
-.superMap {
-	background-color: rgba(0, 0, 0, 0.8);
-	backdrop-filter: blur(5px);
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	z-index: 3;
-	width: 1px;
-	height: 1px;
-	transform: translate(-50%,-50%);
-	//opacity: 0;
-	visibility: hidden;
-	//overflow-x: auto;
-	//overflow-y: hidden;
-}
-
-.button {
-	//background-color: red;
-	width: 50px;
-	height: 50px;
-	position:absolute;
-	top:-50%;
-	left:0;
-}
-
-$container_width: 390px;
-
-body {
-	background-color: grey;
-	//min-width: 1080px; // don't know what it does, saw it in the video about responsive design
-}
-
-body.lock {
-	overflow: hidden; // something about the scroll
-}
-
-.header {
-	//background-color: green;
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-}
-
-.image {
-	height: 100%;
-	//background-color: aqua;
-	margin: auto auto;
-}
-
-link {
-	width: 50px;
-	height: 50px;
-	background-color: aqua;
-}
-
-.popup {
-	background-color: rgba(0, 0, 0, 0.8);
-	backdrop-filter: blur(5px);
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 3;
-	width: 100%;
-	height: 100%;
-	opacity: 0;
-	visibility: hidden;
-	overflow-x: auto;
-	overflow-y: hidden;
-	transition: all 0.3s ease 0s;
-}
-
-.popupContent {
-	position: relative;
-	margin: 20vh auto;
-	width: $container_width;
-}
-
-.popup.open {
-	opacity: 1;
-	visibility: visible;
-}
-
-.close_popup {
-	position: absolute;
-	bottom: 30px;
-	right: 30px;
-	font-size: 20px;
-	color: black;
-	text-decoration: none;
-}
-
-.player {
-	//background-color: aqua;
-	height: 100%;
-	width: 100%;
-	max-width: $container_width;
-	position: absolute;
-	top: 20vh;
-	left: calc(50vw - $container_width / 2);
-}
-
-.player_body {
-	width: 70%;
-	position: absolute;
-	top: 0;
-	left: calc(($container_width - ($container_width * 0.7)) / 2);
-}
-
-.tapereel,.tapereel_2 { 
-	position: absolute;
-	top: -35px;
-	width: 55%;
-	transform: rotate(var(--x));
-}
-
-.tapereel {
-	left: -30px;
-}
-
-.tapereel_2 {
-	right: -30px;
-}
-
-.timeDisplay{
-	//background-color: aqua;
-	width: 20%;
-	position: absolute;
-	top: 130px;
-	left: calc(($container_width * 70/100) / 2);
-	transform: translate(-50%, 0%);
-}
-
-.digits {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(45%, 20%);
-}
-
-.progressBar {
-	//background-color: aqua;
-	width: 60%;
-	position: absolute;
-	top: 177px;
-	left: calc(($container_width * 70/100) / 2);
-	transform: translate(-50%, 0%);
-	touch-action: none;
-}
-
-.handle {
-	//background-color: bisque;
-	width: 10%;
-	position: absolute;
-	top: -6px;
-	left: var(--handle-position);
-	transform: translateX(-50%); 
-	pointer-events: none;
-}
-
-.controls {
-	position: absolute;
-	top: 200px;
-	left: calc(($container_width * 70/100) / 2);
-	transform: translate(-50%, 0%);
-	width: 80%;
-	height: 50px;
-	//background-color: red;
-}
-
-.play,.forward,.rewind {
-	width: 15%;
-}
-
-.forward,.rewind {
-	top: 3px;
-}
-
-.play {
-	position: absolute;
-	//background-color: aqua;
-	top: 0;
-	left: 120px;
-}
-
-.forward {
-	position: absolute;
-	left: 215px;
-}
-
-.rewind {
-	position: absolute;
-	left: 10px;
-}
-/*
-@media (min-width:1000px) {
-	#ok {display: block}
-	#notOk {display: none}
-}
-
-@media only screen and (orientation:landscape) and (max-width:1000px) {
-	#notOk {display: block}
-	#ok {display: none}
-}
-
-@media only screen and (orientation:portrait) {
-	#ok {display: block}
-	#notOk {display: none}
-}
-	*/
+.webp body { background: url(../img/background.webp) center/cover no-repeat; }

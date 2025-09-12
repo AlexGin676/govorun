@@ -2,80 +2,98 @@
 <html lang="en">
 	<head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=500"> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250909091302">
+	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250912164751">
 	<title>govorun</title>
 </head>
 	<body>
-		<main>
-			<div class="container">
-				<picture><source srcset="img/wasteland/wasteland.webp" type="image/webp"><img class="image" src="img/wasteland/wasteland.png" alt="" usemap="#Map"></picture>
-				<audio class="audioOnClick" src=""></audio>
-				<map name="Map">
-					<area id="playOnClick" shape="rect" coords="50,170,200,210" href="#" onclick="event.preventDefault()" alt="wasteland/Blake 1">
-					<area id="tip" shape="rect" coords="50,230,160,280" href="#popup1" class="popup-link" alt="wasteland/popup 1">
-					<area id="playOnClick" shape="rect" coords="280,170,430,210" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Blake 2">
-					<area id="tip" shape="rect" coords="300,230,410,280" href="#popup1" class="popup-link" alt="wasteland/popup 2">
-					<area id="playOnClick" shape="rect" coords="50,295,200,330" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Blake 3">
-					<area id="tip" shape="rect" coords="50,345,160,395" href="#popup1" class="popup-link" alt="wasteland/popup 3">
-					<area id="playOnClick" shape="rect" coords="250,295,450,330" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Cromwell 1">
-					<area id="tip" shape="rect" coords="295,345,405,395" href="#popup1" class="popup-link" alt="wasteland/popup 4">
-					<area id="playOnClick" shape="rect" coords="30,420,230,450" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Cromwell 2">
-					<area id="tip" shape="rect" coords="50,470,160,510" href="#popup1" class="popup-link" alt="wasteland/popup 5">
-					<area id="playOnClick" shape="rect" coords="280,420,460,450" href="#" onclick="event.preventDefault()" alt="wasteland/Cromwell 3">
-					<area id="tip" shape="rect" coords="280,470,450,510" href="#popup1" class="popup-link" alt="wasteland/popup 6">
-					<area id="playOnClick" shape="rect" coords="50,540,210,575" href="#" onclick="event.preventDefault()" alt="wasteland/Diana 1">
-					<area id="tip" shape="rect" coords="60,590,170,640" href="#popup1" class="popup-link" alt="wasteland/popup 7">
-					<area id="playOnClick" shape="rect" coords="300,540,450,575" href="#" onclick="event.preventDefault()" alt="wasteland/Diana 2">
-					<area id="tip" shape="rect" coords="305,590,405,640" href="#popup1" class="popup-link" alt="wasteland/popup 8">
-					<area id="playerPopup" shape="rect" coords="220,700,350,780" href="#popup2" class="popup-link" alt="wasteland/Wasteland - 2">
-				</map>
-			</div>
-		</main>
-		<!--
-		<div class="wrapper">
-			<main id="ok">
-				<div class="container">
-					<picture><source srcset="img/wasteland/wasteland.webp" type="image/webp"><img class="image" src="img/wasteland/wasteland.png" alt="" usemap="#Map"></picture>
-					<audio class="audioOnClick" src=""></audio>
-					<div class="superMap">
-						<div class="button">
-
-						</div>
-						<map class="map" name="Map">
-							<area id="playOnClick" shape="rect" coords="0,140,150,160" href="#" onclick="event.preventDefault()" alt="wasteland/Blake 1">
-							<area id="tip" shape="rect" coords="50,230,160,280" href="#popup1" class="popup-link" alt="wasteland/popup 1">
-							<area id="playOnClick" shape="rect" coords="280,170,430,210" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Blake 2">
-							<area id="tip" shape="rect" coords="300,230,410,280" href="#popup1" class="popup-link" alt="wasteland/popup 2">
-							<area id="playOnClick" shape="rect" coords="50,295,200,330" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Blake 3">
-							<area id="tip" shape="rect" coords="50,345,160,395" href="#popup1" class="popup-link" alt="wasteland/popup 3">
-							<area id="playOnClick" shape="rect" coords="250,295,450,330" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Cromwell 1">
-							<area id="tip" shape="rect" coords="295,345,405,395" href="#popup1" class="popup-link" alt="wasteland/popup 4">
-							<area id="playOnClick" shape="rect" coords="30,420,230,450" href="#" onclick="event.preventDefault()" class="playOnClick" alt="wasteland/Cromwell 2">
-							<area id="tip" shape="rect" coords="50,470,160,510" href="#popup1" class="popup-link" alt="wasteland/popup 5">
-							<area id="playOnClick" shape="rect" coords="280,420,460,450" href="#" onclick="event.preventDefault()" alt="wasteland/Cromwell 3">
-							<area id="tip" shape="rect" coords="280,470,450,510" href="#popup1" class="popup-link" alt="wasteland/popup 6">
-							<area id="playOnClick" shape="rect" coords="50,540,210,575" href="#" onclick="event.preventDefault()" alt="wasteland/Diana 1">
-							<area id="tip" shape="rect" coords="60,590,170,640" href="#popup1" class="popup-link" alt="wasteland/popup 7">
-							<area id="playOnClick" shape="rect" coords="300,540,450,575" href="#" onclick="event.preventDefault()" alt="wasteland/Diana 2">
-							<area id="tip" shape="rect" coords="230,455,300,490" href="#popup1" class="popup-link" alt="wasteland/popup 8">
-							<area id="playerPopup" shape="rect" coords="70,540,250,600" href="#popup2" class="popup-link" alt="wasteland/Wasteland - 1">
-						</map>		
-					</div>
+		<div id="ok" class="wrapper">
+			<picture><source srcset="img/wasteland/wasteland.webp" type="image/webp"><img class="image" src="img/wasteland/wasteland.png" alt=""></picture>
+			<audio class="audioOnClick" src=""></audio>
+			<div class="imageMap">
+				<div id="playOnClick" class="spot">
+						<span id="figures">30 4 20 10</span>
+						<span id="title">wasteland/Blake 1</span>
 				</div>
-			</main>
+				<div id="playOnClick" class="spot">
+						<span id="figures">30 4 20 56</span>
+						<span id="title">wasteland/Blake 2</span>
+				</div>
+				<div id="playOnClick" class="spot">
+					<span id="figures">30 4 33 10</span>
+					<span id="title">wasteland/Blake 3</span>
+				</div>
+				<div id="playOnClick" class="spot">
+					<span id="figures">40 4 33 50</span>
+					<span id="title">wasteland/Cromwell 1</span>
+				</div>
+				<div id="playOnClick" class="spot">
+					<span id="figures">41 4 47 6</span>
+					<span id="title">wasteland/Cromwell 2</span>
+				</div>
+				<div id="playOnClick" class="spot">
+					<span id="figures">41 4 47 52</span>
+					<span id="title">wasteland/Cromwell 3</span>
+				</div>
+				<div id="playOnClick" class="spot">
+					<span id="figures">33 4 61 10</span>
+					<span id="title">wasteland/Diana 1</span>
+				</div>
+				<div id="playOnClick" class="spot">
+					<span id="figures">33 4 61 58</span>
+					<span id="title">wasteland/Diana 2</span>
+				</div>
+
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">21 5 26 11</span>
+					<span id="title">wasteland/popup 1</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">21 5 26 60</span>
+					<span id="title">wasteland/popup 2</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">21 5 39 11</span>
+					<span id="title">wasteland/popup 3</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">21 5 39 60</span>
+					<span id="title">wasteland/popup 4</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">21 5 53 11</span>
+					<span id="title">wasteland/popup 5</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">21 5 53 60</span>
+					<span id="title">wasteland/popup 6</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">22 6 66 11</span>
+					<span id="title">wasteland/popup 7</span>
+				</a>
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">22 6 66 60</span>
+					<span id="title">wasteland/popup 8</span>
+				</a>
+				<a id="playerPopup" href="#popup2" class="spot popup-link">
+					<span id="figures">16 7 79 45</span>
+					<span id="title">wasteland/wasteland - 2</span>
+				</a>
+				
+			</div>
+		</div>
+		<div id="notOk" class="notOk">
+			<p>поверни мобилку</p>
 		</div>
 
-		<div id="notOk">
-			<span>поверни мобилку</span>
-		</div>
--->
 		<div id="popup1" class="popup">
 			<div class="popupContent">
-				<img id="popupImage" src="" alt="">
+				<div class="popupImage">
+					<img id="popupImage" src="" alt="">
+				</div>
 			</div>
 		</div>
-
 		<div id="popup2" class="popup">
 			<div class="player">
 	<audio class="audioPlayer" src=""></audio>
@@ -85,20 +103,24 @@
 		<img class="tapereel_2" src="img/player/tape reel 2.png" alt="">
 		<div class="timeDisplay">
 			<img src="img/player/time display.png" alt="">
-			<span class="digits">00:00</span>
+			<div class="digits">00:00</div>
 		</div>
-		<div class="progressBar"><img src="img/player/progress bar.png" alt="">
-			<div class="handle"><picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture></div>
+		<div class="progressBar">
+			<img src="img/player/progress bar.png" alt="">
+			<div class="handle">
+				<picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture>
+			</div> 
 		</div>
 		<div class="controls">
 			<img class="play" src="" alt="">
 			<picture><source srcset="img/player/backward.webp" type="image/webp"><img class="rewind" src="img/player/backward.png" alt=""></picture>
 			<picture><source srcset="img/player/forward.webp" type="image/webp"><img class="forward" src="img/player/forward.png" alt=""></picture>
-		</div>
 	</div>
 </div>	
 		</div>
 
-		<script src="js/app.min.js?_v=20250909091302"></script>
+		<script src="js/app.min.js?_v=20250912164751"></script>
 	</body>
 </html>
+
+		
