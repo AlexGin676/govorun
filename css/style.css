@@ -63,6 +63,7 @@ button::-moz-focus-inner {
 a,
 a:visited {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
@@ -104,7 +105,7 @@ body.lock {
   min-height: 100vh;
 }
 
-.image {
+.mainImage {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -134,6 +135,7 @@ body.lock {
   height: --height;
   z-index: 4;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header {
