@@ -4,33 +4,46 @@
   border: 0;
 }
 
+*::-moz-selection {
+  background-color: transparent;
+}
+
 *::selection {
   background-color: transparent;
 }
 
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-:focus, :active {
+:focus,
+:active {
   outline: none;
 }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none;
 }
 
-nav, footer, header, aside {
+nav,
+footer,
+header,
+aside {
   display: block;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   font-family: inherit;
 }
 
@@ -47,7 +60,8 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -80,9 +94,8 @@ span {
   --height: 0;
 }
 
-body {
-  background: url("../img/background 2.jpg") center/cover no-repeat;
-}
+.no-webp body {
+  background: url("../img/background 2.jpg") center/cover no-repeat; }
 
 body.lock {
   overflow: hidden;
@@ -96,7 +109,9 @@ body.lock {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   max-height: 100vh;
 }
 
@@ -104,7 +119,9 @@ body.lock {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   z-index: 3;
   width: calc(var(--width) * 1px);
   height: calc(var(--height) * 1px);
@@ -149,6 +166,7 @@ link {
   visibility: hidden;
   overflow-x: auto;
   overflow-y: hidden;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -156,7 +174,9 @@ link {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: calc(var(--width) * 1px);
   height: calc(var(--height) * 1px);
 }
@@ -185,7 +205,9 @@ link {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: calc(var(--width) * 1px);
   height: calc(var(--height) * 1px);
 }
@@ -195,14 +217,18 @@ link {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .player {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: calc(var(--width) * 1px);
   height: calc(var(--height) * 1px);
 }
@@ -213,7 +239,9 @@ link {
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .frame {
@@ -221,14 +249,19 @@ link {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.tapereel, .tapereel_2 {
+.tapereel,
+.tapereel_2 {
   position: absolute;
   top: -12%;
   width: 55%;
-  transform: rotate(var(--x));
+  -webkit-transform: rotate(var(--x));
+      -ms-transform: rotate(var(--x));
+          transform: rotate(var(--x));
 }
 
 .tapereel {
@@ -245,14 +278,18 @@ link {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
 }
 
 .digits {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   font-size: 100%;
 }
 
@@ -262,8 +299,11 @@ link {
   top: 68%;
   height: 3%;
   left: 50%;
-  transform: translate(-50%, 0%);
-  touch-action: none;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .handle {
@@ -271,7 +311,9 @@ link {
   position: absolute;
   top: -55%;
   left: var(--handle-position);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   pointer-events: none;
 }
 
@@ -279,24 +321,31 @@ link {
   position: absolute;
   top: 77%;
   left: 50%;
-  transform: translate(-50%, 0%);
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   width: 80%;
   height: 15%;
 }
 
-.play, .forward, .rewind {
+.play,
+.forward,
+.rewind {
   position: absolute;
   width: 15%;
 }
 
-.forward, .rewind {
+.forward,
+.rewind {
   top: 10%;
 }
 
 .play {
   top: 0%;
   left: 50%;
-  transform: translateX(-40%);
+  -webkit-transform: translateX(-40%);
+      -ms-transform: translateX(-40%);
+          transform: translateX(-40%);
 }
 
 .forward {
@@ -311,31 +360,41 @@ link {
   #ok {
     display: block;
   }
+
   #notOk {
     display: none;
   }
 }
-@media only screen and (orientation: portrait) {
-  #ok {
-    display: block;
-  }
-  #notOk {
-    display: none;
-  }
-}
+
 @media only screen and (orientation: landscape) and (max-width: 1000px) {
   #notOk {
     display: block;
   }
+
   #ok {
     display: none;
   }
+
   .notOk {
     position: fixed;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     color: white;
     font-size: 40px;
   }
 }
+
+@media only screen and (orientation: portrait) {
+  #ok {
+    display: block;
+  }
+
+  #notOk {
+    display: none;
+  }
+}
+
+.webp body { background: url("../img/background 2.jpg") center/cover no-repeat; }
