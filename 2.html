@@ -3,59 +3,34 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250913134938">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>govorun</title>
 </head>
 	<body>
-		<main>
-			<header class="header">
-	<a href="index.html">
-		<picture><source srcset="img/head.webp" type="image/webp"><img class="image" src="img/head.png" alt=""></picture>
-	</a>
-</header>
-			<div class="container">
-				<picture><source srcset="img/2.webp" type="image/webp"><img class="image" src="img/2.png" alt="" usemap="#Map"></picture>
-
-				<map name="Map">
-					<area shape="rect" coords="100,100,400,400" href="wasteland.html" alt="">
-					<area shape="rect" coords="100,500,400,800" href="#popup" class="popup-link" alt="A Real Hero">
-				</map>
-				<!--
-				<div class="player-full">
-					<img src="img/player/player full.png" alt="">
-				</div>
-				-->
+		<div id="ok" class="wrapper">
+			<img class="mainImage" src="img/2.png" alt="">
+			<div class="imageMap">
+				<a id="header" href="index.html" class="spot">
+	<span id="figures">100 11 0 0</span>
+</a>
+				<a id="TV" href="#popup3" class="spot popup-link">
+					<span id="figures">16 7 20 70</span>
+					<span id="title">A Real Hero</span>
+				</a>
 			</div>
-		</main>
-		<footer>
-	
-</footer>
-
-		<div id="popup" class="popup">
-			<div class="player">
-	<audio class="audioPlayer" src=""></audio>
-	<div class="player_body">
-		<picture><source srcset="img/player/frame.webp" type="image/webp"><img class="frame" src="img/player/frame.png" alt=""></picture>
-		<img class="tapereel" src="img/player/tape reel.png" alt="">
-		<img class="tapereel_2" src="img/player/tape reel 2.png" alt="">
-		<div class="timeDisplay">
-			<img src="img/player/time display.png" alt="">
-			<div class="digits">00:00</div>
 		</div>
-		<div class="progressBar">
-			<img src="img/player/progress bar.png" alt="">
-			<div class="handle">
-				<picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture>
-			</div> 
-		</div>
-		<div class="controls">
-			<img class="play" src="" alt="">
-			<picture><source srcset="img/player/backward.webp" type="image/webp"><img class="rewind" src="img/player/backward.png" alt=""></picture>
-			<picture><source srcset="img/player/forward.webp" type="image/webp"><img class="forward" src="img/player/forward.png" alt=""></picture>
-	</div>
-</div>	
+		<div id="notOk" class="notOk">
+			<p>поверни мобилку</p>
 		</div>
 
-		<script src="js/app.min.js?_v=20250913134938"></script>
+		<div id="popup3" class="popup">
+			<div class="tvContainer">
+	<img id="TV" class="tv" src="img/TV/TV.png" alt="">
+	<!--<video src="files/video/Zhirinovsky.mp4"></video>-->
+</div>
+
+		</div>
+
+		<script src="js/app.min.js"></script>
 	</body>
 </html>

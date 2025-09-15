@@ -3,28 +3,27 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250913134938">
+	<link rel="stylesheet" href="css/style.min.css">
 	<title>govorun</title>
 </head>
 	<body>
-		<main>
-			<header class="header">
-	<a href="index.html">
-		<picture><source srcset="img/head.webp" type="image/webp"><img class="image" src="img/head.png" alt=""></picture>
-	</a>
-</header>
-			<div class="container">
-				<picture><source srcset="img/1.webp" type="image/webp"><img class="image" src="img/1.png" alt="" usemap="#Map"></picture>
-				
-				<map name="Map">
-					<area shape="rect" coords="280,650,480,800" href="2.html" alt="">
-					<area shape="rect" coords="50,650,220,800" href="test.html" alt="">
-				</map>
+		<div id="ok" class="wrapper">
+			<img class="mainImage" src="img/1.png" alt="">
+			<div class="imageMap">
+				<a id="header" href="index.html" class="spot">
+	<span id="figures">100 11 0 0</span>
+</a>
+				<a href="2.html" class="spot">
+					<span id="figures">34 18 68 57</span>
+				</a>
+				<a href="https://yandex.ru/search?text=как+сделать+правильный+выбор&source=tabbar&lr=14" class="spot">
+					<span id="figures">34 18 68 11</span>
+				</a>
 			</div>
-			<footer>
-	
-</footer>
-		</main>
-		<script src="js/app.min.js?_v=20250913134938"></script>
+		</div>
+		<div id="notOk" class="notOk">
+			<p>поверни мобилку</p>
+		</div>
+		<script src="js/app.min.js"></script>
 	</body>
 </html>
