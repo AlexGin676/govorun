@@ -128,8 +128,6 @@ body.lock {
 }
 
 .spot {
-  background-color: red;
-  opacity: 20%;
   position: absolute;
   top: --top;
   left: --left;
@@ -170,7 +168,9 @@ link {
   transition: all 0.3s ease 0s;
 }
 
-.popupContent {
+.popupContent,
+.player,
+.tvContainer {
   position: relative;
   top: 50%;
   left: 50%;
@@ -201,17 +201,6 @@ link {
   text-decoration: none;
 }
 
-.tvContainer {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: calc(var(--width) * 1px);
-  height: calc(var(--height) * 1px);
-}
-
 .tv {
   width: 100%;
   position: absolute;
@@ -220,17 +209,32 @@ link {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
-.player {
-  position: relative;
-  top: 50%;
-  left: 50%;
+.screen {
+  background-color: black;
+  width: 85%;
+  height: 45%;
+  border-radius: 10%;
+  position: absolute;
+  top: 40%;
+  left: 48%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: calc(var(--width) * 1px);
-  height: calc(var(--height) * 1px);
+  z-index: 3;
+}
+
+.video {
+  width: 76%;
+  position: absolute;
+  top: 36%;
+  left: 44%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 4;
 }
 
 .player_body {
