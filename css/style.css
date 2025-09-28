@@ -151,9 +151,8 @@ link {
   background-color: aqua;
 }
 
+.popupGif,
 .popup {
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(5px);
   position: fixed;
   top: 0;
   left: 0;
@@ -168,6 +167,12 @@ link {
   transition: all 0.3s ease 0s;
 }
 
+.popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.gif,
 .popupContent,
 .player,
 .tvContainer {
@@ -183,8 +188,13 @@ link {
 
 .popupImage {
   position: absolute;
-  top: 30%;
+  top: 0;
   left: 0;
+}
+
+.popupGif.open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .popup.open {
@@ -212,29 +222,15 @@ link {
   z-index: 5;
 }
 
-.screen {
-  background-color: black;
-  width: 85%;
-  height: 45%;
-  border-radius: 10%;
+.video {
+  width: 81%;
   position: absolute;
   top: 40%;
-  left: 48%;
+  left: 47%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 3;
-}
-
-.video {
-  width: 76%;
-  position: absolute;
-  top: 36%;
-  left: 44%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 4;
 }
 
 .player_body {
