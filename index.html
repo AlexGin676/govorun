@@ -3,13 +3,19 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250928175710">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251005121550">
 	<title>govorun</title>
 </head>
 	<body>
 		<div id="ok" class="wrapper">
 			<picture><source srcset="img/cover.webp" type="image/webp"><img class="mainImage" src="img/cover.png" alt=""></picture>
 			<div class="imageMap">
+
+				<a id="tip" href="#popup1" class="spot popup-link">
+					<span id="figures">40 4 91 8</span>
+					<span id="title">cover popup</span>
+				</a>
+
 				<a href="1.html" class="spot">
 					<span id="figures">15 5 91 82</span>
 				</a>
@@ -18,6 +24,15 @@
 		<div id="notOk" class="notOk">
 			<p>поверни мобилку</p>
 		</div>
-		<script src="js/app.min.js?_v=20250928175710"></script>
+
+		<div id="popup1" class="popup">
+			<div class="popupContent">
+				<div class="popupImage">
+					<img id="popupImage" src="" alt="">
+				</div>
+			</div>
+		</div>
+
+		<script src="js/app.min.js?_v=20251005121550"></script>
 	</body>
 </html>
