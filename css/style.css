@@ -157,8 +157,8 @@ span {
   border: none;
   outline: none;
   background: none;
-  background-color: red;
-  opacity: 20%;
+  //background-color: red;
+  //opacity: 20%;
 }
 
 .input {
