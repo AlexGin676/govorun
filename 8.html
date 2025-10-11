@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20251005121550">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251011121711">
 	<title>govorun</title>
 </head>
 	<body>
@@ -12,10 +12,16 @@
 			<div class="imageMap">
 				<a id="header" href="index.html" class="spot">
 	<span id="figures">100 11 0 0</span>
+	<picture><source srcset="img/header.webp" type="image/webp"><img src="img/header.png" alt=""></picture>
 </a>
-				<a id="tv" href="#popup3" class="spot popup-link">
+				<div class="epigraph">
+	<img src="img/video epigraph.png" alt="">
+</div>
+				<div class="arrows">
+	<picture><source srcset="img/arrows.webp" type="image/webp"><img src="img/arrows.png" alt=""></picture>
+</div>
+				<a id="tv" href="#tvPopup" class="spot">
 					<span id="figures">15 8 17 75</span>
-					<span id="title">video epigraph 4</span>
 				</a>
 				<a href="9.html" class="spot">
 					<span id="figures">12 6 90 84</span>
@@ -29,15 +35,16 @@
 			<p>поверни мобилку</p>
 		</div>
 
-		<div id="popup3" class="popup">
+		<div id="tvPopup" class="popup">
 			<div id="tvPopup" class="tvContainer">
 	<picture><source srcset="img/TV/TV.webp" type="image/webp"><img class="tv" src="img/TV/TV.png" alt=""></picture>
 	<video class="video">
-		<source src="" type="video/mp4">
+		<source src="files/video/video epigraph 3.mp4" type="video/mp4">
 	</video>
 </div>
 
 		</div>
-		<script src="js/app.min.js?_v=20251005121550"></script>
+
+		<script src="js/app.min.js?_v=20251011121711"></script>
 	</body>
 </html>

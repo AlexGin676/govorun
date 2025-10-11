@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20251005121550">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251011121711">
 	<title>govorun</title>
 </head>
 	<body>
@@ -13,25 +13,38 @@
 			<div class="imageMap">
 				<a id="header" href="index.html" class="spot">
 	<span id="figures">100 11 0 0</span>
+	<picture><source srcset="img/header.webp" type="image/webp"><img src="img/header.png" alt=""></picture>
 </a>
-			
-				<div id="playOnClick" class="spot">
-						<span id="figures">30 25 31 5</span>
+				<div class="arrows">
+	<picture><source srcset="img/arrows.webp" type="image/webp"><img src="img/arrows.png" alt=""></picture>
+</div>
+				<button id="playOnClick" class="spot">
+						<span id="figures">30 25 27 66</span>
 						<span id="title">chapter 3/Jim Carrey</span>
-				</div>
+				</button>
 
-				<div id="playOnClick" class="spot">
-						<span id="figures">29 5 72 3</span>
+				<button id="playOnClick" class="spot">
+						<span id="figures">29 5 66 3</span>
 						<span id="title">chapter 3/a mint</span>
-				</div>
-				<div id="playOnClick" class="spot">
-						<span id="figures">34 5 72 35</span>
+				</button>
+				<button id="playOnClick" class="spot">
+						<span id="figures">34 5 66 35</span>
 						<span id="title">chapter 3/a minute</span>
-				</div>
-				<div id="playOnClick" class="spot">
-						<span id="figures">24 5 72 73</span>
+				</button>
+				<button id="playOnClick" class="spot">
+						<span id="figures">24 5 66 72</span>
 						<span id="title">chapter 3/a hint</span>
+				</button>
+
+				<div class="spot">
+					<input class="input" type="text">
+					<span id="figures">30 4 80 10</span>
 				</div>
+				<button class="spot check">
+					<span id="figures">31 5 79 49</span>
+					<span id="answer">a mint</span>
+					<span id="title">popup 14</span>
+				</button>
 
 				<a href="15.html" class="spot">
 					<span id="figures">12 6 90 84</span>
@@ -40,34 +53,24 @@
 					<span id="figures">12 6 90 6</span>
 				</a>
 				
-				<div class="spot">
-					<input class="input" type="text">
-					<span id="figures">30 4 86.5 10</span>
-				</div>
-				<div class="spot check">
-					<span id="figures">31 4 86.5 50</span>
-				</div>
-				
 			</div>
 		</div>
 		<div id="notOk" class="notOk">
 			<p>поверни мобилку</p>
 		</div>
 
-		<div id="popup1" class="popup">
+		<div id="tip" class="popup">
 			<div class="popupContent">
-				<audio class="audio1" src="files/audio/chapter 3/6.mp3"></audio>
 				<div class="popupImage">
 					<img id="popupImage" src="" alt="">
 				</div>
 			</div>
 		</div>
 
-		<div class="popupGif">
-			<div class="gif">
-				<picture><source srcset="files/dulya.webp" type="image/webp"><img src="files/dulya.png" alt=""></picture>
-			</div>
+		<div id="dulya" class="dulyaPopup">
+			<picture><source srcset="img/dulya/dulya.webp" type="image/webp"><img src="img/dulya/dulya.png" alt=""></picture>
 		</div>
-		<script src="js/app.min.js?_v=20251005121550"></script>
+
+		<script src="js/app.min.js?_v=20251011121711"></script>
 	</body>
 </html>

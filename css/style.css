@@ -74,6 +74,11 @@ ul li {
   list-style: none;
 }
 
+:root {
+  --width: 0;
+  --height: 0;
+}
+
 img {
   max-width: 100%;
   vertical-align: top;
@@ -89,20 +94,18 @@ span {
   display: none;
 }
 
-:root {
-  --width: 0;
-  --height: 0;
-}
-
 .no-webp body {
   background: url("../img/background 2.jpg") center/cover no-repeat; }
 
-body.lock {
-  overflow: hidden;
-}
-
 .wrapper {
   min-height: 100vh;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 
 .mainImage {
@@ -113,6 +116,21 @@ body.lock {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-height: 100vh;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.epigraph {
+  width: 30%;
+  position: absolute;
+  top: 17%;
+  right: 3%;
+  z-index: 1;
 }
 
 .imageMap {
@@ -134,8 +152,13 @@ body.lock {
   width: --width;
   height: --height;
   z-index: 4;
-  cursor: pointer;
   -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  background-color: red;
+  opacity: 20%;
 }
 
 .input {
@@ -146,20 +169,15 @@ body.lock {
   font-size: 1rem;
 }
 
-.header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-
+/*
 link {
-  width: 50px;
-  height: 50px;
-  background-color: aqua;
+	width: 50px;
+	height: 50px;
+	background-color: aqua;
 }
+*/
 
-.popupGif,
+.dulyaPopup,
 .popup {
   position: fixed;
   top: 0;
@@ -180,7 +198,7 @@ link {
   backdrop-filter: blur(5px);
 }
 
-.gif {
+.dulyaPopup img {
   position: relative;
   top: 50%;
   left: 50%;
@@ -210,7 +228,7 @@ link {
   left: 0;
 }
 
-.popupGif.open {
+.dulyaPopup.open {
   opacity: 1;
   visibility: visible;
 }
@@ -218,15 +236,6 @@ link {
 .popup.open {
   opacity: 1;
   visibility: visible;
-}
-
-.close_popup {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
 }
 
 .tv {
