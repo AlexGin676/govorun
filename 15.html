@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
+	<link rel="stylesheet" href="css/style.min.css?_v=20251014100506">
+	<title>govorun</title>
+</head>
+	<body>
+		<div id="ok" class="wrapper">
+			<picture><source srcset="img/15.webp" type="image/webp"><img class="mainImage" src="img/15.png" alt=""></picture>
+			<audio class="audioOnClick" src=""></audio>
+			<div class="imageMap">
+				<a id="header" href="index.html" class="spot">
+	<span id="figures">100 11 0 0</span>
+	<picture><source srcset="img/header.webp" type="image/webp"><img src="img/header.png" alt=""></picture>
+</a>
+				<div class="arrows">
+	<picture><source srcset="img/arrows.webp" type="image/webp"><img src="img/arrows.png" alt=""></picture>
+</div>
+				<button id="playOnClick" class="spot">
+						<span id="figures">28 24 18 68</span>
+						<span id="title">chapter 3/Jim Carrey</span>
+				</button>
+
+				<button id="playOnClick" class="spot">
+						<span id="figures">29 5 44.5 3</span>
+						<span id="title">chapter 3/a mint</span>
+				</button>
+				<button id="playOnClick" class="spot">
+						<span id="figures">34 5 44.5 35</span>
+						<span id="title">chapter 3/a minute</span>
+				</button>
+				<button id="playOnClick" class="spot">
+						<span id="figures">24 5 44.5 72</span>
+						<span id="title">chapter 3/a hint</span>
+				</button>
+
+				<div class="spot">
+					<input class="input" type="text">
+					<span id="figures">30 4 59 10</span>
+				</div>
+				<button data-answer="a mint" data-answer-popup="popup 15" data-audio="chapter 3/7" class="spot check">
+					<span id="figures">31 5 58 49</span>
+				</button>
+				<button data-player="chapter 3/8" class="spot">
+						<span id="figures">50 10 70 10</span>
+				</button>
+
+				<a href="16.html" class="spot">
+					<span id="figures">12 6 90 84</span>
+				</a>
+				<a href="14.html" class="spot">
+					<span id="figures">12 6 90 6</span>
+				</a>
+				
+			</div>
+			<div id="popup" class="popup">
+				<div class="popupContent">
+					<div class="popupImage">
+						<img id="popupImage" src="" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div id="dulya" class="dulyaPopup">
+				<picture><source srcset="img/dulya/dulya.webp" type="image/webp"><img src="img/dulya/dulya.png" alt=""></picture>
+			</div>
+
+			<div id="player" class="playerPopup">
+				<div class="player">
+	<audio class="audioPlayer" src=""></audio>
+	<div class="player_body">
+		<picture><source srcset="img/player/frame.webp" type="image/webp"><img class="frame" src="img/player/frame.png" alt=""></picture>
+		<img class="tapereel" src="img/player/tape reel.png" alt="">
+		<img class="tapereel_2" src="img/player/tape reel 2.png" alt="">
+		<div class="timeDisplay">
+			<img src="img/player/time display.png" alt="">
+			<div class="digits">00:00</div>
+		</div>
+		<div class="progressBar">
+			<img src="img/player/progress bar.png" alt="">
+			<div class="handle">
+				<picture><source srcset="img/player/slider.webp" type="image/webp"><img src="img/player/slider.png" alt=""></picture>
+			</div> 
+		</div>
+		<div class="controls">
+			<picture><source srcset="img/player/play.webp" type="image/webp"><img class="play" src="img/player/play.png" alt=""></picture>
+			<picture><source srcset="img/player/backward.webp" type="image/webp"><img class="rewind" src="img/player/backward.png" alt=""></picture>
+			<picture><source srcset="img/player/forward.webp" type="image/webp"><img class="forward" src="img/player/forward.png" alt=""></picture>
+	</div>
+</div>	
+			</div>
+		</div>
+		<div id="notOk" class="notOk">
+			<p>поверни мобилку</p>
+		</div>
+
+		<script src="js/app.min.js?_v=20251014100506"></script>
+	</body>
+</html>
