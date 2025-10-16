@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width" initial-scale=1.0> <!-- initial-scale=1.0, maximum-scale=1.0, user-scalable=0 // this bans scaling on other devices-->
-	<link rel="stylesheet" href="css/style.min.css?_v=20251014100506">
+	<link rel="stylesheet" href="css/style.min.css?_v=20251016154733">
 	<title>govorun</title>
 </head>
 	<body>
@@ -38,13 +38,16 @@
 
 		<div id="tvPopup" class="popup">
 			<div id="tvPopup" class="tvContainer">
-	<video class="video">
-		<source src="files/video/video epigraph 1.mp4" type="video/mp4">
+	<video preload="auto" class="videoTV">
+		<source src="files/video/video epigraph 15.mp4" type="video/mp4">
 	</video>
-	<picture><source srcset="img/TV/TV.webp" type="image/webp"><img class="tv" src="img/TV/TV.png" alt=""></picture>
+	<div class="tv">
+		<picture><source srcset="img/TV/TV.webp" type="image/webp"><img src="img/TV/TV.png" alt=""></picture>
+	</div>
 </div>
 
+
 		</div>
-		<script src="js/app.min.js?_v=20251014100506"></script>
+		<script src="js/app.min.js?_v=20251016154733"></script>
 	</body>
 </html>

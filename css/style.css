@@ -167,14 +167,6 @@ span {
   font-size: 1rem;
 }
 
-/*
-link {
-	width: 50px;
-	height: 50px;
-	background-color: aqua;
-}
-*/
-
 .playerPopup,
 .dulyaPopup,
 .popup {
@@ -243,7 +235,17 @@ link {
   visibility: visible;
 }
 
-.tv {
+.videoTV {
+  width: 81%;
+  position: absolute;
+  top: 40%;
+  left: 47%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.tv img {
   width: 100%;
   position: absolute;
   top: 40%;
@@ -252,17 +254,6 @@ link {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 5;
-}
-
-.video {
-  width: 81%;
-  position: absolute;
-  top: 40%;
-  left: 47%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 3;
 }
 
 .player_body {
@@ -361,6 +352,7 @@ link {
 }
 
 .play,
+.pause,
 .forward,
 .rewind {
   position: absolute;
@@ -372,12 +364,25 @@ link {
   top: 10%;
 }
 
-.play {
+.play,
+.pause {
   top: 0%;
   left: 50%;
   -webkit-transform: translateX(-40%);
       -ms-transform: translateX(-40%);
           transform: translateX(-40%);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.play.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.pause.open {
+  opacity: 1;
+  visibility: visible;
 }
 
 .forward {
